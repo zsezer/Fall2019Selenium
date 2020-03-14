@@ -12,9 +12,18 @@ public class BasicNavigation {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         //in selenium everything starts from WebDriver Interface
-         driver.get("http://google.com"); //to open website
+        driver.get("http://google.com"); //to open website
         Thread.sleep(3000);//for demo, wait 3 seconds
-        driver.close();// to close browser
+        String title= driver.getTitle();//returns <title>Some title</title> text
+        String expectedTitle="Google";
+        System.out.println("title = " + title);
+        if(expectedTitle.equals(title)) {
+            System.out.println("Test Passed");
+        }else{
+            System.out.println("Test Failed");
+        }
+
+        driver.close();// to close browser---browser close by itself
 
 
 
