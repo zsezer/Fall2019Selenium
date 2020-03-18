@@ -37,6 +37,7 @@ public class RadioButton {
 
 
         }
+            System.out.println();
     }
         driver.quit();
 }
